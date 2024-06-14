@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		
+
+
+	</style>
+	<title>Calculator</title>
+	<link rel="stylesheet" href="style calculatrice.css">
+</head>
+<body>
+
+	<header>
+		<h1>mon site web <span>.</span> </h1>
+		<ul>
+			<li> <a href="index.html">home</a></li>
+			<li> <a href="form.html">inscription</a> </li>
+			<li> <a href="produit.html">nos produit</a> </li>
+			<li> <a href="connexion.html">connexion</a>  </li>
+			<li> <a href="calculatrice.html">calculatrice</a>  </li>
+		</ul>
+	</header> 
+<div class="tr">
+    <div class="calculatrice">
+		<p class="infos">designed by steve mk</p>
+		<form name="form">
+		  <div class="resultat">
+			<input type="text" name="fenetre" id="fenetre">
+		 </div>
+		 <div class="buttons">
+			 <div class="row">
+				 <input type="button" value="7" name="v7" 
+				 onclick="val(v7.value)">
+				 <input type="button" value="8" name="v8" 
+				 onclick="val(v8.value)">
+				 <input type="button" value="9" name="v9" 
+				 onclick="val(v9.value)">
+				 <input type="button" value="+" name="plus" 
+				 onclick="val(plus.value)">
+		   </div>
+		   <div class="row">
+				 <input type="button" value="4" name="v4" 
+				 onclick="val(v4.value)">
+				 <input type="button" value="5" name="v5" 
+				 onclick="val(v5.value)">
+				 <input type="button" value="6" name="v6" 
+				 onclick="val(v6.value)">
+				 <input type="button" value="-" name="moins" 
+				 onclick="val(moins.value)">
+		   </div>
+		   <div class="row">
+				 <input type="button" value="1" name="v1" 
+				 onclick="val(v1.value)">
+				 <input type="button" value="2" name="v2" 
+				 onclick="val(v2.value)">
+				 <input type="button" value="3" name="v3" 
+				 onclick="val(v3.value)">
+				 <input type="button" value="*" name="mult" 
+				 onclick="val(mult.value)">
+		   </div>
+		   <div class="row">
+				 <input type="button" value="0" name="v0" 
+				 onclick="val(v0.value)">
+				 <input type="button" value="." name="dot" 
+				 onclick="val(dot.value)">
+				 <input type="button" value="/" name="div" 
+				 onclick="val(div.value)">
+				 <input type="button" value="=" name="egal" 
+				 onclick="calcule()">
+		   </div>
+		   <input type="button" name="reset" value="suppr" class="reset" onclick="suppr()">
+		 </div>  
+		</form>
+	</div>
+   
+</div>
+ 
+<script type="text/javascript">
+	const info = document.querySelector('.infos')
+	const allBtns = document.querySelectorAll('input[type="button"]')
+	function val(resultat){
+		form.fenetre.value = form.fenetre.value + resultat
+	}
+	function calcule(){
+		if(form.fenetre.value ==""){
+			info.innerText = 'veuillez ecrire un chiffre';
+			allBtns.forEach(btn => {
+				btn.addEventListener('click',function(){
+					info.innerText = ""
+				})
+			})
+		}else{
+			form.fenetre.value = eval(form.fenetre.value)
+		}
+	}
+	function suppr(){
+		form.fenetre.value = "";
+	}
+</script>
+
+<footer>
+	<p>copyrigth &copy 2024 by <span>steve mk</span> </p>
+</foot>
+</body>
+</html>

@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background:rgb(194, 75, 75)  
+}
+
+header{
+    padding: 30px;
+    align-items: center;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+header ul  li  {
+    font-weight: bold;
+    float: left;
+    margin-left: 35px;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 15px;
+   
+}
+ header a{
+    transition: 0.5s;
+    color: black;
+    text-decoration: none;
+}
+
+header ul li a:hover{
+    color: rgb(207, 55, 55);
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+header h1{
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header h1 span{
+    color: rgb(202, 35, 35);
+}
+
+.divider{
+    width: 100px;
+    height: 2px;
+    margin: 2rem auto ;
+    background: #ffa500;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 60px;
+}
+h2{
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    margin: 0 auto;
+    box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    background-color: #fff;
+    margin-top: 2rem;
+    border-radius: 10px;
+
+}
+
+form div input{
+        width: 100%;
+        height: 8vh;
+        border-radius: 8px;
+        outline: none;
+        border: 2px solid salmon;
+        padding: 0 30px;
+        box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+form div{
+    position: relative;
+    margin-bottom: 5px;
+}
+
+label{
+    display: block;
+    margin-bottom: 15px;
+}
+input:focus{
+    border: 2px solid rgb(207, 81, 81);
+}
+form div i{
+    position: absolute;
+    padding: 13px;
+}
+.failure-icon,
+.success-icon{
+    right: 0;
+    opacity: 0;
+}
+.failure-icon,
+.error
+{
+    color: red;
+}
+
+.success-icon{
+    color: green;
+}
+.error{
+    font-size: 14px;
+    margin-top: 5px;
+    
+
+}
+button{
+    margin-top: 15px;
+    width: 100%;
+    height: 45px;
+    background-color: rgb(194, 75, 75);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    cursor:pointer;
+    transition: all 0.1s ease;
+}
+
+footer{
+    background-color: #000;
+    height: 5vh;
+    text-align: center;
+    color: rgba(235, 46, 46, 0.5);
+    font-size: 18px;
+
+}
+
+footer p span{
+   text-transform: uppercase;
+    font-weight: bold;
+    color:#fff
+}
+
+footer p{
+    text-transform: capitalize;
+     text-align: center;
+     line-height: 25px;
+ }
+button:hover{
+    opacity: 0.8;
+}
+@media (max-width: 900){
+    container{
+        flex-direction: column;
+        margin: 2rem;
+    }
+
+    form{
+        width: 100%;
+    }
+}
+@media (max-width: 425px){
+    form{
+        padding: 25px;
+    }
+}
